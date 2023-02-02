@@ -28,6 +28,6 @@ export class ContentList{
             <p>${content.description}</p>
             <p>Creator: ${content.creator}</p>
             <p>Type: ${content.type}</p>
-        </div>`;
+        </div> <hr/>`;
     }
 }
