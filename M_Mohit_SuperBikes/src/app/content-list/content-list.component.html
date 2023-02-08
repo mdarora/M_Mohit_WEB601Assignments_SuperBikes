@@ -5,5 +5,10 @@
         <p>{{content.description}}</p>
         <p><strong>Creator:</strong> {{content.creator}}</p>
         <p><strong>Type:</strong> {{content.type}}</p>
+        <p><strong>Tags:</strong> 
+            <ng-container *ngFor="let tag of content.tags">
+                {{tag}},
+            </ng-container>
+        </p>
     </div>
 </section>
