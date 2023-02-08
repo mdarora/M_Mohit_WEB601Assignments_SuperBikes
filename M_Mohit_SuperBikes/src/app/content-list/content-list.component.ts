@@ -69,4 +69,8 @@ export class ContentListComponent {
       },
     ]
   }
+
+  handleClick(content: Content){
+    console.log(`ID: ${content.id}, Title: ${content.title}`);
+  }
 }
