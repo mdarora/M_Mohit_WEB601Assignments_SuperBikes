@@ -3,9 +3,9 @@
         <img [src]="content.imgURL" alt={{content.title}} (click)="handleClick(content)">
         <h2>{{content.title}}</h2>
         <p>{{content.description}}</p>
-        <p><strong>Creator:</strong> {{content.creator}}</p>
-        <p><strong>Type:</strong> {{content.type}}</p>
-        <p><strong>Tags:</strong> 
+        <p *ngIf="content.creator"><strong>Creator:</strong> {{content.creator}}</p>
+        <p *ngIf="content.type"><strong>Type:</strong> {{content.type}}</p>
+        <p *ngIf="content.tags"><strong>Tags:</strong> 
             <ng-container *ngFor="let tag of content.tags">
                 {{tag}},
             </ng-container>
