@@ -1,6 +1,6 @@
 <section class="cards">
     <div *ngFor="let content of contents | slice: 0:5" class="card">
-        <img [src]="content.imgURL" alt={{content.title}}>
+        <img [src]="content.imgURL" alt={{content.title}} (click)="handleClick(content)">
         <h2>{{content.title}}</h2>
         <p>{{content.description}}</p>
         <p><strong>Creator:</strong> {{content.creator}}</p>
