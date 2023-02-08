@@ -1,9 +1,9 @@
 <section class="cards">
     <div *ngFor="let content of contents | slice: 0:5" class="card">
-        <img [src]="content.imgURL" alt={{content.title}} (click)="handleClick(content)">
+        <img *ngIf="content.imgURL" [src]="content.imgURL" alt={{content.title}} (click)="handleClick(content)">
         <h2>{{content.title}}</h2>
         <p>{{content.description}}</p>
-        <p *ngIf="content.creator"><strong>Creator:</strong> {{content.creator}}</p>
+        <p><strong>Creator:</strong> {{content.creator}}</p>
         <p *ngIf="content.type"><strong>Type:</strong> {{content.type}}</p>
         <p *ngIf="content.tags"><strong>Tags:</strong> 
             <ng-container *ngFor="let tag of content.tags">
