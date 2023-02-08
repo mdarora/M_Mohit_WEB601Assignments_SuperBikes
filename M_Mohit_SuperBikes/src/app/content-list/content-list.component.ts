@@ -17,7 +17,8 @@ export class ContentListComponent {
         description: "The Kawasaki Ninja ZX-10R is a motorcycle in the Ninja sport bike series from the Japanese manufacturer Kawasaki, the successor to the Ninja ZX-9R. It was originally released in 2004 and has been updated and revised throughout the years. It combines an ultra-narrow chassis, low weight, and radial brakes.",
         creator: "Kawasaki Motorcycle & Engine Company",
         imgURL: "https://content2.kawasaki.com/ContentStorage/CKM/Products/5016/ba433ac4-0669-47e4-a7f4-735c91bb0362.jpg?w=510&h=340&mode=crop",
-        type: "Super Sport"
+        type: "Super Sport",
+        tags: ["Kawasaki", "Ninja", "Super Sport"]
       },
       {
         id: 1,
