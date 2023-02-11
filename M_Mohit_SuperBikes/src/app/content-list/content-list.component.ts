@@ -8,6 +8,9 @@ import { Content } from '../helper-files/content-interface';
 })
 export class ContentListComponent {
   contents: Content[];
+  searchTitle: string = "";
+  titleFound: boolean | null = null;
+
 
   constructor(){
     this.contents = [
@@ -88,4 +91,9 @@ export class ContentListComponent {
   handleClick(content: Content){
     console.log(`ID: ${content.id}, Title: ${content.title}`);
   }
+  
+  searchByTitle(){
+    this.titleFound = this.contents.some(content => content.title.toLowerCase() === this.searchTitle.toLowerCase());
+  }
+
 }
