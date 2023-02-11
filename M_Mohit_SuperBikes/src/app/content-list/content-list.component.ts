@@ -67,6 +67,14 @@ export class ContentListComponent {
         type: "Naked Super Sport"
       },
       {
+        id: 6,
+        title: "Kawasaki Z900",
+        description: "The Kawasaki Z900 is a standard motorcycle of the Kawasaki Z series made by Kawasaki since 2017. It replaced the Z800.",
+        creator: "Kawasaki Motorcycle & Engine Company",
+        imgURL: "https://content2.kawasaki.com/ContentStorage/CKM/Products/5291/c89af561-fe2a-4087-87c7-6e9e54b2f7d5.png?w=767",
+        type: "Naked Super Sport"
+      },
+      {
         id: 7,
         title: "Kawasaki Ninja 1000 SX",
         description: "The Kawasaki Ninja 1000 SX is a motorcycle in the Ninja series from the Japanese manufacturer Kawasaki sold since 2011. Other than its name, it is unrelated to the Ninja 1000R produced from 1986-89, or to other Ninja motorcycles.",
