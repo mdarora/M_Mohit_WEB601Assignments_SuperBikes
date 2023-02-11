@@ -1,4 +1,12 @@
 <main>
+    <section class="searchForm">
+        <div>
+            <input type="text" [(ngModel)]="searchTitle" placeholder="Search Title here...">{{searchTitle}}
+            <button (click)="searchByTitle">Search</button>
+        </div>
+    </section>
+
+
     <h1>Bikes with no type</h1>
     <section class="cards">
         <div *ngFor="let content of contents | contentType" class="card noContentType">
