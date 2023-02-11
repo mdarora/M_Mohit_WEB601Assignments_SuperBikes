@@ -70,7 +70,7 @@ export class ContentListComponent {
         type: "Naked Super Sport"
       },
       {
-        id: 6,
+        id: 7,
         title: "Kawasaki Z900",
         description: "The Kawasaki Z900 is a standard motorcycle of the Kawasaki Z series made by Kawasaki since 2017. It replaced the Z800.",
         creator: "Kawasaki Motorcycle & Engine Company",
@@ -78,7 +78,7 @@ export class ContentListComponent {
         type: "Naked Super Sport"
       },
       {
-        id: 7,
+        id: 8,
         title: "Kawasaki Ninja 1000 SX",
         description: "The Kawasaki Ninja 1000 SX is a motorcycle in the Ninja series from the Japanese manufacturer Kawasaki sold since 2011. Other than its name, it is unrelated to the Ninja 1000R produced from 1986-89, or to other Ninja motorcycles.",
         creator: "Kawasaki Motorcycle & Engine Company",
@@ -93,7 +93,23 @@ export class ContentListComponent {
   }
   
   searchByTitle(){
-    this.titleFound = this.contents.some(content => content.title.toLowerCase() === this.searchTitle.toLowerCase());
+    const matchingBike = this.contents.find(bike => bike.title.toLowerCase() === this.searchTitle.toLowerCase());
+    const cardElements = document.querySelectorAll(`div.card`);
+
+    if(matchingBike){
+      this.titleFound = true;
+
+      cardElements.forEach(card => {
+        if(parseInt(card.id) == matchingBike.id){
+          card.classList.add('matched');
+        } else {
+          card.classList.remove('matched');
+        }
+      });
+    } else {
+      this.titleFound = false;
+      cardElements.forEach(card => card.classList.remove('matched'));
+    }
   }
 
 }

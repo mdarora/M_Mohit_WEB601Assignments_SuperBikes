@@ -47,6 +47,7 @@ main{
     width: 400px;
     margin-bottom: 15px;
     border: 1px solid gray;
+    transition: all .5s;
 
     &.noContentType{
         color: #74F0ED;
@@ -59,6 +60,12 @@ main{
     &.nakedSuperSport{
         color: #000;
         background-color: #a0aecd;
+    }
+
+    &.matched{
+        border: 5px solid #2e8b57;
+        transform: scale(1.08);
+        box-shadow: 1px 1px 30px #00fa9a;
     }
 
 
