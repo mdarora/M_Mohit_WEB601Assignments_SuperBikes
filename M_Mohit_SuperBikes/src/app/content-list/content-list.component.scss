@@ -1,3 +1,7 @@
+main > h1{
+    margin-top: 15px;
+    text-align: center;
+}
 .cards{
     min-width: 80%;
     max-width: 1100px;
@@ -14,9 +18,20 @@
     margin-bottom: 15px;
     border: 1px solid gray;
 
-    &:first-child{
-        border: 2px solid black;
+    &.noContentType{
+        color: #74F0ED;
+        background-color: black;
     }
+    &.superSport{
+        color: #5ebec4;
+        background-color: #fdf5df;
+    }
+    &.nakedSuperSport{
+        color: #000;
+        background-color: #a0aecd;
+    }
+
+
     img{
         max-width: 100%;
         cursor: pointer;
