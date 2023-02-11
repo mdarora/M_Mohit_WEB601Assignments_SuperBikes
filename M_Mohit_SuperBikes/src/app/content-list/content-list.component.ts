@@ -34,7 +34,6 @@ export class ContentListComponent {
         description: "The Kawasaki Ninja H2 is a supercharged supersport-class motorcycle in the Ninja sports bike series manufactured by Kawasaki, featuring a variable-speed centrifugal supercharger.",
         creator: "Kawasaki Motorcycle & Engine Company",
         imgURL: "https://content2.kawasaki.com/ContentStorage/CKM/ProductTrimGroup/31/cbcb96d1-4e57-4563-9ccf-0b3ce735ca38.jpg?w=750",
-        type: "supercharged HyperSport"
       },
       {
         id: 3,
@@ -58,7 +57,6 @@ export class ContentListComponent {
         description: "The Suzuki GSX1300R Hayabusa is a sports motorcycle made by Suzuki since 1999. It immediately won acclaim as the world's fastest production motorcycle, with a top speed of 303 to 312 km/h.",
         creator: "Suzuki",
         imgURL: "https://www.suzuki.ca/wp-content/uploads/DIA1.jpg",
-        type: "Super Sport"
       },
       {
         id: 6,
@@ -67,6 +65,14 @@ export class ContentListComponent {
         creator: "Yamaha Motor Company",
         imgURL: "https://cdn-tp3.mozu.com/27878-44719/cms/44719/files/0de49048-2615-4155-aba1-fe0f35108102",
         type: "Naked Super Sport"
+      },
+      {
+        id: 7,
+        title: "Kawasaki Ninja 1000 SX",
+        description: "The Kawasaki Ninja 1000 SX is a motorcycle in the Ninja series from the Japanese manufacturer Kawasaki sold since 2011. Other than its name, it is unrelated to the Ninja 1000R produced from 1986-89, or to other Ninja motorcycles.",
+        creator: "Kawasaki Motorcycle & Engine Company",
+        imgURL: "https://content2.kawasaki.com/ContentStorage/CKM/Products/5100/b0b9b877-688e-48f7-a882-6aefc79ce7ef.jpg?w=510&h=340&mode=crop",
+        type: "Touring Sport"
       },
     ]
   }
