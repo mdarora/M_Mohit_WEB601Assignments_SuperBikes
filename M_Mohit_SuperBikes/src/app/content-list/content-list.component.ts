@@ -100,7 +100,7 @@ export class ContentListComponent {
       this.titleFound = true;
 
       cardElements.forEach(card => {
-        if(parseInt(card.id) == matchingBike.id){
+        if(parseInt(card.id) === matchingBike.id){
           card.classList.add('matched');
         } else {
           card.classList.remove('matched');
