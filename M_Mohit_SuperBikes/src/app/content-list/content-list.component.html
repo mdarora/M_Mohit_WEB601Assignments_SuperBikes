@@ -27,7 +27,7 @@
             <h2>{{content.title}}</h2>
             <p>{{content.description}}</p>
             <p><strong>Creator:</strong> {{content.creator}}</p>
-            <p *ngIf="content.type"><strong>Type:</strong> {{content.type}}</p>
+            <p *ngIf="content.type" appHoverAffect><strong>Type:</strong> {{content.type}}</p>
             <p *ngIf="content.tags"><strong>Tags:</strong> 
                 <ng-container *ngFor="let tag of content.tags">
                     {{tag}},
@@ -50,7 +50,7 @@
             <h2>{{content.title}}</h2>
             <p>{{content.description}}</p>
             <p><strong>Creator:</strong> {{content.creator}}</p>
-            <p *ngIf="content.type"><strong>Type:</strong> {{content.type}}</p>
+            <p *ngIf="content.type" appHoverAffect><strong>Type:</strong> {{content.type}}</p>
             <p *ngIf="content.tags"><strong>Tags:</strong> 
                 <ng-container *ngFor="let tag of content.tags">
                     {{tag}},
@@ -73,7 +73,7 @@
             <h2>{{content.title}}</h2>
             <p>{{content.description}}</p>
             <p><strong>Creator:</strong> {{content.creator}}</p>
-            <p *ngIf="content.type"><strong>Type:</strong> {{content.type}}</p>
+            <p *ngIf="content.type" appHoverAffect><strong>Type:</strong> {{content.type}}</p>
             <p *ngIf="content.tags"><strong>Tags:</strong> 
                 <ng-container *ngFor="let tag of content.tags">
                     {{tag}},
