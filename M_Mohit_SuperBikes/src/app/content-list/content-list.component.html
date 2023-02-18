@@ -27,11 +27,11 @@
             <h2>{{content.title}}</h2>
             <p>{{content.description}}</p>
             <p><strong>Creator:</strong> {{content.creator}}</p>
-            <p *ngIf="content.type" appHoverAffect><strong>Type:</strong> {{content.type}}</p>
+            <p *ngIf="content.type" appHoverAffect="underline"><strong>Type:</strong> {{content.type}}</p>
             <p *ngIf="content.tags"><strong>Tags:</strong> 
-                <ng-container *ngFor="let tag of content.tags">
+                <span *ngFor="let tag of content.tags" appHoverAffect="bold">
                     {{tag}},
-                </ng-container>
+                </span>
             </p>
         </div>
     </section>
@@ -50,11 +50,11 @@
             <h2>{{content.title}}</h2>
             <p>{{content.description}}</p>
             <p><strong>Creator:</strong> {{content.creator}}</p>
-            <p *ngIf="content.type" appHoverAffect><strong>Type:</strong> {{content.type}}</p>
+            <p *ngIf="content.type" appHoverAffect="underline"><strong>Type:</strong> {{content.type}}</p>
             <p *ngIf="content.tags"><strong>Tags:</strong> 
-                <ng-container *ngFor="let tag of content.tags">
+                <span *ngFor="let tag of content.tags" appHoverAffect="bold">
                     {{tag}},
-                </ng-container>
+                </span>
             </p>
         </div>
     </section>
@@ -73,11 +73,11 @@
             <h2>{{content.title}}</h2>
             <p>{{content.description}}</p>
             <p><strong>Creator:</strong> {{content.creator}}</p>
-            <p *ngIf="content.type" appHoverAffect><strong>Type:</strong> {{content.type}}</p>
+            <p *ngIf="content.type" appHoverAffect="underline"><strong>Type:</strong> {{content.type}}</p>
             <p *ngIf="content.tags"><strong>Tags:</strong> 
-                <ng-container *ngFor="let tag of content.tags">
+                <span *ngFor="let tag of content.tags" appHoverAffect="bold">
                     {{tag}},
-                </ng-container>
+                </span>
             </p>
         </div>
     </section>

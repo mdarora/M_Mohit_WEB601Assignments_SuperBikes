@@ -1,17 +1,26 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appHoverAffect]'
 })
 export class HoverAffectDirective {
+  @Input('appHoverAffect') hoverAffect: string = '';
 
   constructor(private elm: ElementRef) { }
 
   @HostListener('mouseenter') onMouseEnter(){
-    this.elm.nativeElement.style.textDecoration = 'underline';
+    if(this.hoverAffect === 'underline'){
+      this.elm.nativeElement.style.textDecoration = this.hoverAffect;
+    } else if(this.hoverAffect === 'bold'){
+      this.elm.nativeElement.style.fontWeight = this.hoverAffect;
+    }
   }
   @HostListener('mouseleave') onMouseLeave(){
-    this.elm.nativeElement.style.textDecoration = 'none';
+    if(this.hoverAffect === 'underline'){
+      this.elm.nativeElement.style.textDecoration = 'none';
+    } else if(this.hoverAffect === 'bold'){
+      this.elm.nativeElement.style.fontWeight = 'normal';
+    }
   }
 
 }
