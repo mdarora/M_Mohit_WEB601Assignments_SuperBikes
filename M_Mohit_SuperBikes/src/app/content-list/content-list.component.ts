@@ -54,7 +54,7 @@ export class ContentListComponent {
         description: "The Palingale V4, aside from having a totally awesome name, is a sport motorcycle produced by Italian manufacturer Ducati. The bike has a displacement of 1,103cc, outputting about 214 horsepower from a Desmosedici Stradale V4 engine.",
         creator: "Ducati",
         imgURL: "https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2018/07/Panigale-V4-.jpg?q=50&fit=crop&w=750&dpr=1.5",
-        type: "Super Racing Sport"
+        type: "Super Sport"
       },
       {
         id: 5,
