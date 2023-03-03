@@ -17,20 +17,20 @@ export class CreateContentComponent {
 
     const addBike = new Promise((resolve, reject) =>{
       if(!this.newBike.title){
-        reject('Title is required');
+        reject('Failed to add, Title is required');
       } else if(!this.newBike.description){
-        reject('Description is required');
+        reject('Failed to add, Description is required');
       } else if(!this.newBike.creator){
-        reject('Creator is required');
+        reject('Failed to add, Creator is required');
       } else{
         this.addBikeEvent.emit(this.newBike);
-        this.newBike = {};
         resolve(this.newBike.title);
       }
     });
 
     addBike.then(title => {
       this.errMsg = '';
+      this.newBike = {};
       console.log(`New Bike Added Successfull, Title: ${title}`);
     }).catch(err => {
       this.errMsg = err;
