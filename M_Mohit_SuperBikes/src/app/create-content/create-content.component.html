@@ -14,7 +14,7 @@
 
           <div>
             <label for="desc">Description:</label>
-            <textarea name="description" id="desc" cols="30" rows="10" [(ngModel)]="newBike.description"></textarea>
+            <textarea name="description" id="desc" cols="30" rows="4" [(ngModel)]="newBike.description"></textarea>
           </div>
 
           <div>
@@ -36,6 +36,9 @@
             <button type="submit">Add Bike</button>
           </div>
         </form>
+        <div class="errMsg" *ngIf="errMsg != ''">
+            <p>{{errMsg}}</p>
+        </div>
     </div>
 </section>
   

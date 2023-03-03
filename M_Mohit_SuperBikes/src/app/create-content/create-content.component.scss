@@ -1,5 +1,7 @@
 .newBike-Section{
     margin-bottom: 16px;
+    padding: 16px 0px;
+    background-color: #f5f5f5;
     border-bottom: 1px solid black;
 
     &>div{
@@ -42,6 +44,11 @@
                 background-color: #fff;
             }
         }
+    }
+    .errMsg{
+        color: crimson;
+        text-align: center;
+        margin-bottom: 16px;
     }
     
 }
