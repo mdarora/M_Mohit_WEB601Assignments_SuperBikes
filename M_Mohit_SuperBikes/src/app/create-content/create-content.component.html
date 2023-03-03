@@ -1,10 +1,10 @@
-<section>
+<section class="newBike-Section">
     <div>
         <h2>Add New Bike</h2>
-        <form (submit)="addNewBike()">
+        <form class="newBikeForm" (submit)="addNewBike()">
           <div>
             <label for="id">ID:</label>
-            <input type="number" id="id" name="id" [(ngModel)]="newBike.id">
+            <input type="number" id="id" min="0" name="id" [(ngModel)]="newBike.id">
           </div>
           
           <div>

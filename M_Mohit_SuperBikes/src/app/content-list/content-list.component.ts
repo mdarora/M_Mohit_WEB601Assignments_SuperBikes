@@ -115,8 +115,14 @@ export class ContentListComponent {
   }
 
   addNewBike(newBike: Content){
-    this.contents.push(newBike);
-    this.contents = [...this.contents];
+    const addBike = new Promise((resolve, reject) =>{
+      this.contents.push(newBike);
+      this.contents = [...this.contents];
+      resolve(newBike.title);
+    });
+
+    
+    
   }
 
 }
