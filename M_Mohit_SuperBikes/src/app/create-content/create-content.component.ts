@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output} from '@angular/core';
+import { Content } from '../helper-files/content-interface';
 
 @Component({
   selector: 'app-create-content',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-content.component.scss']
 })
 export class CreateContentComponent {
+  newBike: any = {};
+  @Output() addBikeEvent = new EventEmitter<Content>();
 
+  addNewBike(){
+    this.addBikeEvent.emit(this.newBike);
+    this.newBike = {};
+  }
 }
