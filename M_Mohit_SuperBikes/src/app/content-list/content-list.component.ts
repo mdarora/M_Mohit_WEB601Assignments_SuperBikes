@@ -114,4 +114,9 @@ export class ContentListComponent {
     }
   }
 
+  addNewBike(newBike: Content){
+    this.contents.push(newBike);
+    this.contents = [...this.contents];
+  }
+
 }
