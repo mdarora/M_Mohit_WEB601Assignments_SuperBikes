@@ -22,6 +22,8 @@ export class CreateContentComponent {
         reject('Failed to add, Description is required');
       } else if(!this.newBike.creator){
         reject('Failed to add, Creator is required');
+      } else if(!this.newBike.id){
+        reject('Failed to add, Try again');
       } else{
         this.addBikeEvent.emit(this.newBike);
         resolve(this.newBike.title);
