@@ -22,9 +22,6 @@ export class ContentListComponent {
     this.SuperBikeService.getBikes().subscribe(bikes => this.contents = bikes );
   }
 
-  handleClick(content: Content){
-    console.log(`ID: ${content.id}, Title: ${content.title}`);
-  }
   
   searchByTitle(){
     const matchingBike = this.contents.find(bike => bike.title.toLowerCase() === this.searchTitle.toLowerCase());
