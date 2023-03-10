@@ -1,8 +1,19 @@
 
-<section class="cards">
-    <app-content-card [bike]="oneBikeById" [class]="'oneBike'"></app-content-card>
+<section class="bikeById-sec">
+    <div class="idForm" >
+        <form (submit)="findBikeById()">
+            <label for="bikeId">Enter an ID:</label> <br>
+            <input type="number" min="0" id="bikeId" name="bikeId" [(ngModel)]="bikeId" placeholder="Enter an id">
+            <button>Get Bike</button>
+        </form>
+    </div>
+    <div class="oneCard">
+        <app-content-card [bike]="oneBikeById" [class]="'oneBike'"></app-content-card>
+    </div>
 </section>
 
-<app-content-list></app-content-list>
-
+<hr>
 <app-message></app-message>
+<hr>
+
+<app-content-list></app-content-list>

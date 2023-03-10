@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Content } from './helper-files/content-interface';
+import { MessageService } from './services/message.service';
 import { SuperBikeService } from './services/super-bike.service';
 
 @Component({
@@ -15,6 +16,14 @@ export class AppComponent {
   constructor(private SuperBikeService: SuperBikeService){}
 
   ngOnInit(){
-    this.SuperBikeService.getBikeById(this.bikeId).subscribe(content => this.oneBikeById = content);
+    this.findBikeById();
+  }
+
+  findBikeById(){
+    this.SuperBikeService.getBikeById(this.bikeId).subscribe(result => {
+      if (typeof result === "object"){
+        this.oneBikeById = result;
+      }
+    });
   }
 }
