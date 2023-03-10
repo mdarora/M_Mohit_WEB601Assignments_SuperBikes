@@ -1,19 +1,23 @@
 <div [id]="bike.id" [ngClass]="['card', class]" appHoverAffect="border">
 
-    <div *ngIf="bike.imgURL; else defaultImage">
-        <img  [src]="bike.imgURL" alt={{bike.title}} (click)="handleClick(bike)">
+    <div class="card-img">
+        <div *ngIf="bike.imgURL; else defaultImage">
+            <img  [src]="bike.imgURL" alt={{bike.title}} (click)="handleClick(bike)">
+        </div>
+        <ng-template #defaultImage>
+            <img [src]="defaultBike" alt={{bike.title}} (click)="handleClick(bike)">
+        </ng-template>
     </div>
-    <ng-template #defaultImage>
-        <img [src]="defaultBike" alt={{bike.title}} (click)="handleClick(bike)">
-    </ng-template>
 
-    <h2>{{bike.title}}</h2>
-    <p>{{bike.description}}</p>
-    <p><strong>Creator:</strong> {{bike.creator}}</p>
-    <p *ngIf="bike.type" appHoverAffect="underline"><strong>Type:</strong> {{bike.type}}</p>
-    <p *ngIf="bike.tags"><strong>Tags:</strong> 
-        <span *ngFor="let tag of bike.tags" appHoverAffect="bold">
-            {{tag}},
-        </span>
-    </p>
+    <div class="card-body">
+        <h2>{{bike.title}}</h2>
+        <p>{{bike.description}}</p>
+        <p><strong>Creator:</strong> {{bike.creator}}</p>
+        <p *ngIf="bike.type" appHoverAffect="underline"><strong>Type:</strong> {{bike.type}}</p>
+        <p *ngIf="bike.tags"><strong>Tags:</strong> 
+            <span *ngFor="let tag of bike.tags" appHoverAffect="bold">
+                {{tag}},
+            </span>
+        </p>
+    </div>
 </div>
