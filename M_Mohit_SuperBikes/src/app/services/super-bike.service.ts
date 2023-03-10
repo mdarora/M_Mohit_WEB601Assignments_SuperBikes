@@ -14,4 +14,9 @@ export class SuperBikeService {
     const bikes = contents;
     return of(bikes);
   }
+
+  getBikeById(id: number): Observable<any>{
+    const bike = contents.find(content => content.id === id);
+    return of(bike);
+  }
 }
