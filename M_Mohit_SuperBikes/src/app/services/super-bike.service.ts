@@ -10,13 +10,21 @@ import { MessageService } from './message.service';
   providedIn: 'root'
 })
 export class SuperBikeService {
+  private httpOptions = {
+    headers: new HttpHeaders({ "Content-Type": "application/json"})
+  }
 
   constructor(private http: HttpClient , private MessageService: MessageService) { }
+  
 
   getBikes(): Observable<Content[]>{
-    const bikes = contents;
     this.MessageService.add("Content array loaded!");
     return this.http.get<Content[]>("/api/bikes");
+  }
+
+  addBike(newBike: Content): Observable<Content>{
+    this.MessageService.add(`New Bike added`);
+    return this.http.post<Content>("/api/bikes", newBike, this.httpOptions);
   }
 
   getBikeById(id: number): Observable<any>{

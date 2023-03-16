@@ -22,6 +22,13 @@ export class ContentListComponent {
     this.SuperBikeService.getBikes().subscribe(bikes => this.contents = bikes );
   }
 
+  addNewBike(newBike: Content){
+    this.SuperBikeService.addBike(newBike).subscribe(newBikeFromServer => {
+      this.contents.push(newBikeFromServer);
+      this.contents = [...this.contents];
+    });
+  }
+
   
   searchByTitle(){
     const matchingBike = this.contents.find(bike => bike.title.toLowerCase() === this.searchTitle.toLowerCase());
