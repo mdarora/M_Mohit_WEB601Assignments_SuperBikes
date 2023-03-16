@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 import { Content } from '../helper-files/content-interface';
 import { contents } from '../helper-files/ContentDb';
 import { MessageService } from './message.service';
@@ -9,12 +11,12 @@ import { MessageService } from './message.service';
 })
 export class SuperBikeService {
 
-  constructor(private MessageService: MessageService) { }
+  constructor(private http: HttpClient , private MessageService: MessageService) { }
 
   getBikes(): Observable<Content[]>{
     const bikes = contents;
     this.MessageService.add("Content array loaded!");
-    return of(bikes);
+    return this.http.get<Content[]>("/api/bikes");
   }
 
   getBikeById(id: number): Observable<any>{
