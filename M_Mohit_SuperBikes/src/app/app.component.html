@@ -6,11 +6,11 @@
                 <mat-label for="bikeId">Enter an ID</mat-label>
                 <input matInput type="number" min="0" id="bikeId" name="bikeId" [(ngModel)]="bikeId" placeholder="Enter an id">
             </mat-form-field> <br>
-            <button mat-raised-button color="primary" type="submit">Get Bike</button>
+            <button mat-raised-button color="primary" type="submit">Get Bike <mat-icon>download</mat-icon></button>
         </form>
     </div>
     <div class="oneCard">
-        <app-content-card [bike]="oneBikeById" [class]="'oneBike'"></app-content-card>
+        <app-content-card [bike]="oneBikeById"  [class]="'oneBike'"></app-content-card>
     </div>
 </section>
 
