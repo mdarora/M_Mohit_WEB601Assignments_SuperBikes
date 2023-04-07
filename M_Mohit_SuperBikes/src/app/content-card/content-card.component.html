@@ -1,5 +1,5 @@
 <mat-card [id]="bike.id" [ngClass]="['card', class]" appHoverAffect="border">
-    <mat-card-header>
+    <mat-card-header [matTooltip]="bike.title" [matTooltipPosition]="'above'">
         <div class="card-img">
             <div *ngIf="bike.imgURL; else defaultImage">
                 <img mat-card-image  [src]="bike.imgURL" alt={{bike.title}} (click)="handleClick(bike)">
