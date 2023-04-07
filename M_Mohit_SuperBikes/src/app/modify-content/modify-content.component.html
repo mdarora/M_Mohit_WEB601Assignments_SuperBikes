@@ -1,46 +1,5 @@
 <section class="newBike-Section">
-    <div>
-        <h2>Add New Bike</h2>
-        <form class="newBikeForm" (submit)="addNewBike()">
-          
-          <div>
-            <mat-form-field appearance="fill">
-              <mat-label for="title">Title</mat-label> 
-              <input matInput type="text" id="title" name="title" [(ngModel)]="newBike.title">
-            </mat-form-field>
-          </div>
-
-          <div>
-            <mat-form-field>
-              <mat-label for="desc">Description</mat-label>
-              <textarea matInput name="description" id="desc" cols="30" rows="4" [(ngModel)]="newBike.description"></textarea>
-            </mat-form-field> 
-          </div>
-
-          <div>
-            <mat-form-field>
-              <mat-label for="creator">Creator</mat-label>
-              <input matInput type="text" id="creator" name="creator" [(ngModel)]="newBike.creator">
-            </mat-form-field>
-          </div>
-          
-          <div>
-            <mat-form-field>
-              <mat-label for="type">Type</mat-label>
-              <input matInput type="text" id="type" name="type" [(ngModel)]="newBike.type">
-            </mat-form-field>
-          </div>
-          
-          <div>
-            <mat-form-field>
-              <mat-label for="img">Image Url</mat-label>
-              <input matInput type="text" id="img" name="img" [(ngModel)]="newBike.imgURL">
-            </mat-form-field>
-          </div>
-
-          <div class="addBtn">
-            <button mat-raised-button color="primary" type="submit">Add Bike</button>
-          </div>
-        </form>
+    <div class="addBtn">
+      <button mat-raised-button color="primary" (click)="openDialog()">Add new Content</button>
     </div>
 </section>
