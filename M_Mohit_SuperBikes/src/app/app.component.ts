@@ -10,20 +10,9 @@ import { SuperBikeService } from './services/super-bike.service';
 })
 export class AppComponent {
   title = 'M_Mohit_SuperBikes';
-  bikeId:number = 8;
-  oneBikeById: any = {};
 
   constructor(private SuperBikeService: SuperBikeService){}
 
-  ngOnInit(){
-    this.findBikeById();
-  }
+  ngOnInit(){}
 
-  findBikeById(){
-    this.SuperBikeService.getBikeById(this.bikeId).subscribe(result => {
-      if (typeof result === "object"){
-        this.oneBikeById = result;
-      }
-    });
-  }
 }

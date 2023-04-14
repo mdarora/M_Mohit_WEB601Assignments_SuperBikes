@@ -23,6 +23,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { AddContentDialogComponent } from './add-content-dialog/add-content-dialog.component';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
  
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AddContentDialogComponent } from './add-content-dialog/add-content-dial
     HoverAffectDirective,
     MessageComponent,
     ModifyContentComponent,
-    AddContentDialogComponent
+    AddContentDialogComponent,
+    ContentDetailComponent
   ],
   imports: [
     BrowserModule,
