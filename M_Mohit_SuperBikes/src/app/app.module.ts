@@ -24,6 +24,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { AddContentDialogComponent } from './add-content-dialog/add-content-dialog.component';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
  
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ContentDetailComponent } from './content-detail/content-detail.componen
     MessageComponent,
     ModifyContentComponent,
     AddContentDialogComponent,
-    ContentDetailComponent
+    ContentDetailComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
