@@ -28,11 +28,11 @@ export class SuperBikeService {
   }
 
   getBikeById(id: number): Observable<any>{
-    const bike = contents.find(content => content.id === id);
+    const bike = this.http.get<Content>(`api/bikes/${id}`);
 
     if(bike){
       this.MessageService.add(`Content Item at id: ${id}`);
-      return of(bike);
+      return bike;
     }
     this.MessageService.add("Invalid Id");
     return of("Invalid Id");
