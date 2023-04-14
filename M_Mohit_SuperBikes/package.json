@@ -1,6 +1,6 @@
 {
   "name": "m-mohit-super-bikes",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "scripts": {
     "ng": "ng",
     "generatecomponent": "ng generate component",
